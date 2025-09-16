@@ -30,6 +30,14 @@ global count
 
 count = 0
 
+@app.get("/get/")
+def read_root():
+    global count
+
+    return {
+        "value": count
+    }
+
 @app.get("/plus/")
 def read_root():
     global count
