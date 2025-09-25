@@ -6,10 +6,6 @@ import asyncio
 from datetime import datetime
 from datetime import timedelta
 from typing import List
-import aioodbc
-
-import random
-import faker
 
 app = FastAPI()
 
