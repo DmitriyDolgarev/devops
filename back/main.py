@@ -9,17 +9,12 @@ from typing import List
 
 app = FastAPI()
 
-origins = [
-    "http://127.0.0.1:5500",  # Разрешить origin вашего клиентского приложения
-    "http://localhost:5500", # Ещё один распространенный вариант для разработки
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"], 
     allow_credentials=True,
-    allow_methods=["*"],  # Разрешить все методы (GET, POST, PUT, DELETE, и т.д.)
-    allow_headers=["*"],  # Разрешить все заголовки
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 global count
